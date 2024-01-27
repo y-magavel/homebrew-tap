@@ -5,20 +5,20 @@
 class Lazycal < Formula
   desc ""
   homepage ""
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/y-magavel/lazycal/releases/download/v0.1.0/lazycal_Darwin_arm64.tar.gz"
-      sha256 "6d11434f033da460f7ac537804f7db3dd41dc3a396b9f3e3c4773a10ecae5830"
+      url "https://github.com/y-magavel/lazycal/releases/download/v0.1.1/lazycal_Darwin_arm64.tar.gz"
+      sha256 "a1034a4b483f8cf9175894001092858ea1251ed6954c3ecec156793e54bac00d"
 
       def install
         bin.install "lazycal"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/y-magavel/lazycal/releases/download/v0.1.0/lazycal_Darwin_x86_64.tar.gz"
-      sha256 "15855b229e8dbeca26bfff8d0e39a396d09d0720cbb86a8222fa5f00728c40e8"
+      url "https://github.com/y-magavel/lazycal/releases/download/v0.1.1/lazycal_Darwin_x86_64.tar.gz"
+      sha256 "f0c239bf14d2e7a0d70e0d513d9ef94f330b312dde3c1793483745dc60aab593"
 
       def install
         bin.install "lazycal"
@@ -27,17 +27,17 @@ class Lazycal < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/y-magavel/lazycal/releases/download/v0.1.0/lazycal_Linux_arm64.tar.gz"
-      sha256 "4c2cdddeac8972024099d7e9b125954779a81d5b1a05eab38708e564cf4fdd93"
+    if Hardware::CPU.intel?
+      url "https://github.com/y-magavel/lazycal/releases/download/v0.1.1/lazycal_Linux_x86_64.tar.gz"
+      sha256 "e7f87cc4936a78c3a6dfa8750c81a25db14548248eebcbc17bc8ed7a0987199f"
 
       def install
         bin.install "lazycal"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/y-magavel/lazycal/releases/download/v0.1.0/lazycal_Linux_x86_64.tar.gz"
-      sha256 "d0e789d16ce228626f2d887437a0b619deb3254d15c98bf8fc7f2e42f7634b9d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/y-magavel/lazycal/releases/download/v0.1.1/lazycal_Linux_arm64.tar.gz"
+      sha256 "e99c4e67834f8a9f6963f496c1f134876b50882e35789a2f7d1876f2025c8164"
 
       def install
         bin.install "lazycal"
